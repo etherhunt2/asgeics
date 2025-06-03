@@ -7,22 +7,22 @@
     <title>ASGEICS INDIA - Professional Engineering Services</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="/src/styles/main.css">
-    <link rel="stylesheet" href="/src/styles/components/header.css">
-    <link rel="stylesheet" href="/src/styles/components/hero.css">
-    <link rel="stylesheet" href="/src/styles/components/services.css">
-    <link rel="stylesheet" href="/src/styles/components/process.css">
-    <link rel="stylesheet" href="/src/styles/components/benefits.css">
-    <link rel="stylesheet" href="/src/styles/components/testimonials.css">
-    <link rel="stylesheet" href="/src/styles/components/clients.css">
-    <link rel="stylesheet" href="/src/styles/components/contact.css">
-    <link rel="stylesheet" href="/src/styles/components/footer.css">
+    <link rel="stylesheet" href="./src/styles/main.css">
+    <link rel="stylesheet" href="./src/styles/components/header.css">
+    <link rel="stylesheet" href="./src/styles/components/hero.css">
+    <link rel="stylesheet" href="./src/styles/components/services.css">
+    <link rel="stylesheet" href="./src/styles/components/process.css">
+    <link rel="stylesheet" href="./src/styles/components/benefits.css">
+    <link rel="stylesheet" href="./src/styles/components/testimonials.css">
+    <link rel="stylesheet" href="./src/styles/components/clients.css">
+    <link rel="stylesheet" href="./src/styles/components/contact.css">
+    <link rel="stylesheet" href="./src/styles/components/footer.css">
 
     <!-- Additional component styles will be added as we create them -->
 </head>
@@ -52,17 +52,17 @@
     <div id="footer-placeholder"></div>
 
     <script type="module">
-        import { initializeMobileMenu, initializeHeaderScroll } from '@/js/shared.js';
+        import { initializeMobileMenu, initializeHeaderScroll } from './src/js/shared.js';
 
         // Component paths
         const components = [
-            { id: 'header-placeholder', path: '/src/components/header.html' },
-            { id: 'hero-placeholder', path: '/src/components/hero.html' },
-            { id: 'services-placeholder', path: '/src/components/services.html' },
-            { id: 'process-placeholder', path: '/src/components/process.html' },
-            { id: 'benefits-placeholder', path: '/src/components/benefits.html' },
-            { id: 'testimonials-placeholder', path: '/src/components/testimonials.html' },
-            { id: 'footer-placeholder', path: '/src/components/footer.html' }
+            { id: 'header-placeholder', path: './src/components/header' },
+            { id: 'hero-placeholder', path: './src/components/hero' },
+            { id: 'services-placeholder', path: './src/components/services' },
+            { id: 'process-placeholder', path: './src/components/process' },
+            { id: 'benefits-placeholder', path: './src/components/benefits' },
+            { id: 'testimonials-placeholder', path: './src/components/testimonials' },
+            { id: 'footer-placeholder', path: './src/components/footer' }
         ];
 
         // Load components
@@ -70,6 +70,9 @@
             try {
                 for (const component of components) {
                     const response = await fetch(component.path);
+                    if (!response.ok) {
+                        throw new Error(`Failed to load component: ${component.path}`);
+                    }
                     const html = await response.text();
                     document.getElementById(component.id).innerHTML = html;
                 }

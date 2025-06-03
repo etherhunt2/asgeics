@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - ASGEICS INDIA</title>
-    <link rel="stylesheet" href="/src/styles/main.css">
-    <link rel="stylesheet" href="/src/styles/components/about.css">
-    <link rel="stylesheet" href="/src/styles/components/header.css">
-    <link rel="stylesheet" href="/src/styles/components/footer.css">
+    <base href="/">
+    <link rel="stylesheet" href="./src/styles/main.css">
+    <link rel="stylesheet" href="./src/styles/components/about.css">
+    <link rel="stylesheet" href="./src/styles/components/header.css">
+    <link rel="stylesheet" href="./src/styles/components/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
@@ -126,12 +127,12 @@
     <div id="footer-placeholder"></div>
 
     <script type="module">
-        import { initializeMobileMenu, initializeHeaderScroll } from '/src/js/shared.js';
+        import { initializeMobileMenu, initializeHeaderScroll } from './src/js/shared.js';
 
         async function loadComponents() {
             try {
                 // Load header
-                const headerResponse = await fetch('/src/components/header.html');
+                const headerResponse = await fetch('./src/components/header');
                 const headerHtml = await headerResponse.text();
                 document.getElementById('header-placeholder').innerHTML = headerHtml;
 
@@ -140,7 +141,7 @@
                 initializeHeaderScroll();
 
                 // Load footer
-                const footerResponse = await fetch('/src/components/footer.html');
+                const footerResponse = await fetch('./src/components/footer');
                 const footerHtml = await footerResponse.text();
                 document.getElementById('footer-placeholder').innerHTML = footerHtml;
             } catch (error) {
