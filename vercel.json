@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/", "dest": "/index.html" },
+    { "src": "/src/pages/about.html", "dest": "/src/pages/about.html" },
+    { "src": "/src/pages/contact.html", "dest": "/src/pages/contact.html" },
+    { "src": "/src/components/(.*)", "dest": "/src/components/$1" },
+    { "src": "/src/js/(.*)", "dest": "/src/js/$1" },
+    { "src": "/src/styles/(.*)", "dest": "/src/styles/$1" },
+    { "src": "/public/(.*)", "dest": "/public/$1" },
+    { "src": "/images/(.*)", "dest": "/images/$1" },
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
+} 

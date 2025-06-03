@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ASGEICS - Professional Engineering Services</title>
+    <title>ASGEICS INDIA - Professional Engineering Services</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <!-- Styles -->
     <link rel="stylesheet" href="./src/styles/main.css">
@@ -29,68 +29,61 @@
 
 <body>
     <!-- Header -->
-    <div id="header-container"></div>
+    <div id="header-placeholder"></div>
 
     <main>
         <!-- Hero -->
-        <div id="hero-container"></div>
+        <div id="hero-placeholder"></div>
 
         <!-- Services -->
-        <div id="services-container"></div>
+        <div id="services-placeholder"></div>
 
         <!-- Process -->
-        <div id="process-container"></div>
+        <div id="process-placeholder"></div>
 
         <!-- Benefits -->
-        <div id="benefits-container"></div>
+        <div id="benefits-placeholder"></div>
 
         <!-- Testimonials -->
-        <div id="testimonials-container"></div>
-
-        <!-- Contact -->
-        <!-- <div id="contact-container"></div> -->
+        <div id="testimonials-placeholder"></div>
     </main>
 
     <!-- Footer -->
-    <div id="footer-container"></div>
+    <div id="footer-placeholder"></div>
 
-    <!-- Scripts -->
     <script type="module">
-        // Import components
+        import { initializeMobileMenu, initializeHeaderScroll } from '/src/js/shared.js';
+
+        // Component paths
         const components = [
-            { id: 'header-container', path: './src/components/header.html' },
-            { id: 'hero-container', path: './src/components/hero.html' },
-            { id: 'services-container', path: './src/components/services.html' },
-            { id: 'process-container', path: './src/components/process.html' },
-            { id: 'benefits-container', path: './src/components/benefits.html' },
-            { id: 'testimonials-container', path: './src/components/testimonials.html' },
-            { id: 'contact-container', path: './src/components/contact.html' },
-            { id: 'footer-container', path: './src/components/footer.html' }
+            { id: 'header-placeholder', path: '/src/components/header.html' },
+            { id: 'hero-placeholder', path: '/src/components/hero.html' },
+            { id: 'services-placeholder', path: '/src/components/services.html' },
+            { id: 'process-placeholder', path: '/src/components/process.html' },
+            { id: 'benefits-placeholder', path: '/src/components/benefits.html' },
+            { id: 'testimonials-placeholder', path: '/src/components/testimonials.html' },
+            { id: 'footer-placeholder', path: '/src/components/footer.html' }
         ];
 
         // Load components
         async function loadComponents() {
-            for (const component of components) {
-                try {
+            try {
+                for (const component of components) {
                     const response = await fetch(component.path);
                     const html = await response.text();
                     document.getElementById(component.id).innerHTML = html;
-                } catch (error) {
-                    console.error(`Error loading component ${component.path}:`, error);
                 }
+
+                // Initialize mobile menu and header scroll
+                initializeMobileMenu();
+                initializeHeaderScroll();
+            } catch (error) {
+                console.error('Error loading components:', error);
             }
         }
 
-        // Initialize
-        document.addEventListener('DOMContentLoaded', () => {
-            loadComponents().then(() => {
-                // Load main.js after components are loaded
-                const script = document.createElement('script');
-                script.src = './src/js/main.js';
-                script.type = 'module';
-                document.body.appendChild(script);
-            });
-        });
+        // Wait for DOM to be ready
+        document.addEventListener('DOMContentLoaded', loadComponents);
     </script>
 </body>
 
