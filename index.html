@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ASGEICS - Professional Engineering Services</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./src/styles/main.css">
+    <link rel="stylesheet" href="./src/styles/components/header.css">
+    <link rel="stylesheet" href="./src/styles/components/hero.css">
+    <link rel="stylesheet" href="./src/styles/components/services.css">
+    <link rel="stylesheet" href="./src/styles/components/process.css">
+    <link rel="stylesheet" href="./src/styles/components/benefits.css">
+    <link rel="stylesheet" href="./src/styles/components/testimonials.css">
+    <link rel="stylesheet" href="./src/styles/components/clients.css">
+    <link rel="stylesheet" href="./src/styles/components/contact.css">
+    <link rel="stylesheet" href="./src/styles/components/footer.css">
+
+    <!-- Additional component styles will be added as we create them -->
+</head>
+
+<body>
+    <!-- Header -->
+    <div id="header-container"></div>
+
+    <main>
+        <!-- Hero -->
+        <div id="hero-container"></div>
+
+        <!-- Services -->
+        <div id="services-container"></div>
+
+        <!-- Process -->
+        <div id="process-container"></div>
+
+        <!-- Benefits -->
+        <div id="benefits-container"></div>
+
+        <!-- Testimonials -->
+        <div id="testimonials-container"></div>
+
+        <!-- Contact -->
+        <!-- <div id="contact-container"></div> -->
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+    <!-- Scripts -->
+    <script type="module">
+        // Import components
+        const components = [
+            { id: 'header-container', path: './src/components/header.html' },
+            { id: 'hero-container', path: './src/components/hero.html' },
+            { id: 'services-container', path: './src/components/services.html' },
+            { id: 'process-container', path: './src/components/process.html' },
+            { id: 'benefits-container', path: './src/components/benefits.html' },
+            { id: 'testimonials-container', path: './src/components/testimonials.html' },
+            { id: 'contact-container', path: './src/components/contact.html' },
+            { id: 'footer-container', path: './src/components/footer.html' }
+        ];
+
+        // Load components
+        async function loadComponents() {
+            for (const component of components) {
+                try {
+                    const response = await fetch(component.path);
+                    const html = await response.text();
+                    document.getElementById(component.id).innerHTML = html;
+                } catch (error) {
+                    console.error(`Error loading component ${component.path}:`, error);
+                }
+            }
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents().then(() => {
+                // Load main.js after components are loaded
+                const script = document.createElement('script');
+                script.src = './src/js/main.js';
+                script.type = 'module';
+                document.body.appendChild(script);
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+<section class="contact" id="contact">
+    <div id="contact-content"></div>
+</section>
+
+<script type="module">
+    import { initializeContact } from '../js/contactForm.js';
+
+    // Initialize the contact form when the DOM is loaded
+    document.addEventListener('DOMContentLoaded', () => {
+        initializeContact('contact-content');
+    });
+</script>
