@@ -1,7 +1,7 @@
 {
-  "name": "asgeics",
+  "name": "asgeics-website",
   "private": true,
-  "version": "1.0.0",
+  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,9 +9,9 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^6.3.5"
+    "vite": "^5.0.0"
   },
   "dependencies": {
-    "@emailjs/browser": "^4.4.1"
+    "@emailjs/browser": "^3.11.0"
   }
 }

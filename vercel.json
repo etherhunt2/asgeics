@@ -1,15 +1,19 @@
 {
   "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "buildCommand": "npm run build",
+        "outputDirectory": "dist"
+      }
+    }
+  ],
   "routes": [
     { "handle": "filesystem" },
-    { "src": "/", "dest": "/index.html" },
-    { "src": "/src/pages/about.html", "dest": "/src/pages/about.html" },
-    { "src": "/src/pages/contact.html", "dest": "/src/pages/contact.html" },
-    { "src": "/src/components/(.*)", "dest": "/src/components/$1" },
-    { "src": "/src/js/(.*)", "dest": "/src/js/$1" },
-    { "src": "/src/styles/(.*)", "dest": "/src/styles/$1" },
-    { "src": "/public/(.*)", "dest": "/public/$1" },
-    { "src": "/images/(.*)", "dest": "/images/$1" },
+    { "src": "/about", "dest": "/src/pages/about.html" },
+    { "src": "/contact", "dest": "/src/pages/contact.html" },
     { "src": "/(.*)", "dest": "/$1" }
   ]
 } 
