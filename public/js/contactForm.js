@@ -1,5 +1,4 @@
 import emailjs from '@emailjs/browser';
-import '../styles/components/contact.css';
 
 // Initialize EmailJS
 const initEmailJS = () => {

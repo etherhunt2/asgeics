@@ -1,45 +1,46 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
+import fs from 'fs';
+
+// Plugin to handle HTML components
+function htmlComponentsPlugin() {
+    return {
+        name: 'html-components',
+        transformIndexHtml(html) {
+            // Replace component placeholders with actual content
+            const componentRegex = /<div id="([^"]+)-placeholder"><\/div>/g;
+            return html.replace(componentRegex, (match, id) => {
+                const componentPath = resolve(__dirname, `src/components/${id}.html`);
+                try {
+                    const content = fs.readFileSync(componentPath, 'utf-8');
+                    return content;
+                } catch (error) {
+                    console.warn(`Component ${id} not found at ${componentPath}`);
+                    return match;
+                }
+            });
+        }
+    };
+}
 
 export default defineConfig({
     build: {
         outDir: 'dist',
         assetsDir: 'assets',
-        rollupOptions: {
-            input: {
-                main: resolve(__dirname, 'index.html'),
-                about: resolve(__dirname, 'about.html'),
-                contact: resolve(__dirname, 'contact.html')
-            },
-            output: {
-                assetFileNames: (assetInfo) => {
-                    if (assetInfo.name.endsWith('.html')) {
-                        return '[name].[ext]';
-                    }
-                    return 'assets/[name]-[hash][extname]';
-                },
-                chunkFileNames: 'assets/[name]-[hash].js',
-                entryFileNames: 'assets/[name]-[hash].js'
-            }
-        }
+        emptyOutDir: true,
+        copyPublicDir: true
     },
-    plugins: [
-        {
-            name: 'html-transform',
-            transformIndexHtml(html) {
-                return html;
-            }
-        }
-    ],
+    plugins: [htmlComponentsPlugin()],
     resolve: {
         alias: {
             '@': resolve(__dirname, 'src')
         }
     },
     server: {
-        open: true
+        open: true,
+        // Handle SPA routing
+        historyApiFallback: true
     },
-    base: '/',
     publicDir: 'public',
-    assetsInclude: ['**/*.html']
+    base: './'
 }); 
