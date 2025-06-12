@@ -10,21 +10,16 @@ export default class Hero extends BaseComponent {
         this.element.innerHTML = `
             <div class="hero__container">
                 <div class="hero__content">
-                    <h1 class="hero__title">Welcome to ASGEICS INDIA</h1>
-                    <p class="hero__subtitle">Empowering Your Business with Innovative Solutions</p>
+                    <h1 class="hero__title">Industry's Reliable Residential<br>Solar Certificate</h1>
+                    <p class="hero__subtitle">We deliver reliable & accurate structural certificate and PE stamps through<br>advanced automation</p>
                     <div class="hero__cta">
-                        <a href="#services" class="btn hero__button hero__button--primary">Our Services</a>
-                        <a href="#contact" class="btn hero__button hero__button--secondary">Contact Us</a>
+                        <a href="/services" class="hero__button">
+                            <span class="hero__button-label">Explore More</span>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="hero__image">
-                <img src="/images/hero-image.png" alt="Hero Image">
-            </div>
-            <div class="hero__background">
-                <div class="hero__shape hero__shape--1"></div>
-                <div class="hero__shape hero__shape--2"></div>
-            </div>
+            <div class="hero__overlay"></div>
         `;
 
         return this.element;

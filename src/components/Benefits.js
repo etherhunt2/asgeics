@@ -11,7 +11,7 @@ export default class Benefits extends BaseComponent {
             <div class="benefits__container">
                 <header class="benefits__header">
                     <h2 class="benefits__title">Why Choose Us</h2>
-                    <p class="benefits__subtitle">Experience the advantages of working with industry leaders</p>
+                    <p class="benefits__subtitle">Select The Right Solar Engineering Services is Important for Your Project's Success</p>
                 </header>
 
                 <div class="benefits__grid">
@@ -19,7 +19,7 @@ export default class Benefits extends BaseComponent {
                         <div class="benefit-card__icon">
                             <img src="./icons/circle-check-regular.svg" alt="First-Time Approval" style="width: 4.5rem; height: 6.5rem;" />
                         </div>
-                        <h3 class="benefit-card__title">99.9% First-Time Approval</h3>
+                        <h3 class="benefit-card__title">99.9% AHJ Approval</h3>
                         <p class="benefit-card__description">Industry-leading approval rating for your peace of mind.</p>
                     </div>
 
@@ -43,8 +43,50 @@ export default class Benefits extends BaseComponent {
                         <div class="benefit-card__icon">
                             <img src="./icons/shield-solid.svg" alt="First-Time Approval" style="width: 4.5rem; height: 6.5rem;" />
                         </div>
-                        <h3 class="benefit-card__title">Zero AHJ Rejection</h3>
-                        <p class="benefit-card__description">Full credit if your letter is rejected by the AHJ.</p>
+                        <h3 class="benefit-card__title">Zero Utility Rejection</h3>
+                        <p class="benefit-card__description">Free Revisions if your certificate is rejected.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-card__icon">
+                            <img src="./icons/piggy-bank-save.svg" alt="50% Cost Saving" style="width: 4.5rem; height: 6.5rem;" />
+                        </div>
+                        <h3 class="benefit-card__title">50% Cost Saving</h3>
+                        <p class="benefit-card__description">Save 50% on your solar certificate and PE stamps.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-card__icon">
+                            <img src="./icons/payment-method.svg" alt="Flexible Payment Options" style="width: 4.5rem; height: 6.5rem;" />
+                        </div>
+                        <h3 class="benefit-card__title">Flexible Payment Options</h3>
+                        <p class="benefit-card__description">Pay as you go or pay in advance.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-card__icon">
+                            <img src="./icons/stats.svg" alt="Real-Time Progress Tracking" style="width: 4.5rem; height: 6.5rem;" />
+                        </div>
+                        <h3 class="benefit-card__title">Real-Time Progress Tracking</h3>
+                        <p class="benefit-card__description">Track your project's progress in real-time.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-card__icon">
+                            <img src="./icons/html-templates.svg" alt="Customized Templates" style="width: 4.5rem; height: 6.5rem;" />
+                        </div>
+                        <h3 class="benefit-card__title">Customized Templates</h3>
+                        <p class="benefit-card__description">Create your own templates or use our pre-made templates.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-card__icon">
+                            <img src="./icons/truck-load.svg" alt="Large Volume Capacity" style="width: 4.5rem; height: 6.5rem;" />
+                        </div>
+                        <h3 class="benefit-card__title">Large Volume Capacity</h3>
+                        <p class="benefit-card__description">We can handle large volumes of projects.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-card__icon">
+                            <img src="./icons/support-online-center.svg" alt="24/7 Support" style="width: 4.5rem; height: 6.5rem;" />
+                        </div>
+                        <h3 class="benefit-card__title">24/7 Support</h3>
+                        <p class="benefit-card__description">We are always here to help you.</p>
                     </div>
                 </div>
             </div>

@@ -1,8 +1,9 @@
 .header {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  border-radius: 10px;
   z-index: 1000;
   background-color: var(--background-color);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -10,7 +11,7 @@
 }
 
 .header.scrolled {
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 255, 0.85);
 }
 
 .header__container {
@@ -19,31 +20,65 @@
   align-items: center;
   padding: 0.1rem var(--container-padding);
   max-width: var(--container-width);
-  margin: 0 auto;
+  padding: 0;
+  margin: -20px auto;
 }
 
 .header__logo {
   text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  padding: 0;
+  margin: 0;
+  line-height: 0;
 }
 
 .header__logo img {
-  width: 5rem;
-  height: 5rem;
+  width: 8rem;
+  height: 8rem;
+  display: block;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+
+.header__logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .header__logo span {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
-  color: var(--primary-color);
+  /* color: var(--primary-color); */
+  color: #fe6600;
+  font-family: "Rockwell", serif;
+  /* text-decoration: underline; */
+  text-decoration-color: var(--primary-color);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  line-height: 1.2;
+}
+
+.header__logo-subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  color: indigo;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 1rem;
 }
 
 .header__nav {
   display: flex;
   gap: 2rem;
   align-items: center;
+}
+
+.header__nav-link:hover {
+  color: var(--primary-color);
 }
 
 .header__nav-item {
@@ -54,8 +89,26 @@
   color: var(--text-color);
   text-decoration: none;
   font-weight: 800;
+  font-size: 1.2rem;
+  font-family: "Rockwell", serif;
   transition: color 0.3s ease;
   cursor: pointer;
+}
+
+.header__nav-button {
+  background-color: #fe680086;
+  color: var(--background-color);
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 800;
+  font-family: "Rockwell", serif;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.header__nav-button:hover {
+  background-color: rgba(0, 128, 0, 0.534);
 }
 
 .header__mobile-menu {
@@ -127,6 +180,7 @@
 
   .header__mobile-menu {
     display: block;
+    margin-right: 10px;
   }
 }
 

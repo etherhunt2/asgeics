@@ -10,7 +10,7 @@ export default class Services extends BaseComponent {
         this.element.innerHTML = `
             <div class="services__container">
                 <header class="services__header">
-                    <h2 class="services__title">Our Services</h2>
+                    <h2 class="services__title">We Offer</h2>
                     <p class="services__subtitle">Discover how we can help your business grow with our comprehensive solutions</p>
                 </header>
 

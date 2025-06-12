@@ -9,7 +9,10 @@ export default class Header {
             <div class="header__container">
                 <a href="./" class="header__logo">
                     <img src="/logo.svg" alt="ASGEICS Logo" />
-                    <span>ASGEICS INDIA</span>
+                    <div class="header__logo-text">
+                        <span>ASGEICS INDIA</span>
+                        <p class="header__logo-subtitle">We Support Your "Dream"</p>
+                    </div>
                 </a>
 
                 <nav class="header__nav">
@@ -18,13 +21,16 @@ export default class Header {
                         <a href="#services" class="header__nav-link header__services-toggle">Services</a>
                         <div class="header__submenu">
                             <a href="#commercial" class="header__submenu-link">Commercial Engineering</a>
-                            <a href="#electrical" class="header__submenu-link">Electrical Engineering</a>
+                            <a href="/electrical-engineering" class="header__submenu-link">Electrical Engineering</a>
                             <a href="#structural" class="header__submenu-link">Structural Engineering</a>
                             <a href="#design" class="header__submenu-link">Design Services</a>
                         </div>
                     </div>
                     <a href="./about" class="header__nav-link">About</a>
                     <a href="./contact" class="header__nav-link">Contact</a>
+                    <button class="header__nav-button">
+                        <a href="mailto:info@asgeics.com" class="header__nav-link">Email Us</a>
+                    </button>
                 </nav>
 
                 <div class="header__mobile-menu">

@@ -24,13 +24,13 @@ export default class Process extends BaseComponent {
                     <div class="process-step">
                         <div class="process-step__number">2</div>
                         <h3 class="process-step__title">Review & Engineering</h3>
-                        <p class="process-step__description">Our engineers review and prepare your structural letter or stamp.</p>
+                        <p class="process-step__description">Our engineers review and prepare your structural certificate or stamp.</p>
                     </div>
 
                     <div class="process-step">
                         <div class="process-step__number">3</div>
-                        <h3 class="process-step__title">Receive Your Letter</h3>
-                        <p class="process-step__description">Get your stamped letter delivered to your inbox, fast and accurate.</p>
+                        <h3 class="process-step__title">Receive Your Certificate</h3>
+                        <p class="process-step__description">Get your stamped certificate delivered to your inbox, fast and accurate.</p>
                     </div>
                 </div>
             </div>

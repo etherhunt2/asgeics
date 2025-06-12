@@ -18,7 +18,7 @@
 
 .process__title {
   font-size: 2.5rem;
-  color: var(--text-color);
+  color: orangered;
   margin-bottom: var(--spacing-md);
 }
 
@@ -91,7 +91,7 @@
 .process-step__title {
   font-size: 1.5rem;
   margin-bottom: var(--spacing-sm);
-  color: var(--text-color);
+  color: indigo;
 }
 
 .process-step__description {

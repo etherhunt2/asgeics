@@ -18,7 +18,7 @@
 
 .benefits__title {
   font-size: 2.5rem;
-  color: var(--text-color);
+  color: orangered;
   margin-bottom: var(--spacing-md);
 }
 
@@ -26,7 +26,7 @@
   font-size: 1.2rem;
   color: var(--text-color);
   opacity: 0.8;
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -72,7 +72,7 @@
 }
 
 .benefit-card__icon .img {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   margin-bottom: var(--spacing-md);
   position: relative;
   z-index: 2;
@@ -96,9 +96,9 @@
 }
 
 .benefit-card__title {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-bottom: var(--spacing-sm);
-  color: var(--text-color);
+  color: indigo;
 }
 
 .benefit-card__description {
