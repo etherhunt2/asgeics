@@ -1,8 +1,11 @@
 import BaseComponent from '../components/BaseComponent.js';
+import emailjs from '@emailjs/browser';
 
 export default class Contact extends BaseComponent {
     constructor() {
         super('main', 'contact-page');
+        // Initialize EmailJS
+        emailjs.init("dMJqXZw1Gqshg36Up");
     }
 
     async render() {
@@ -45,28 +48,28 @@ export default class Contact extends BaseComponent {
                             <div class="contact__info-item">
                                 <i class="fas fa-map-marker-alt"></i>
                                 <h3>Address</h3>
-                                <p>123 Main Street<br>City, State 12345</p>
+                                <p>Plot 231, Sahu Tola,<br>Marar, Ramgarh Jharkhand 829122</p>
                             </div>
 
-                            <div class="contact__info-item">
+                            <div class="contact__info-item" onclick="window.location.href='tel:+918587011172'" style="cursor: pointer;">
                                 <i class="fas fa-phone"></i>
                                 <h3>Phone</h3>
-                                <p>+1 (555) 123-4567</p>
+                                <p>+91 858 701 1172</p>
                             </div>
 
-                            <div class="contact__info-item">
+                            <div class="contact__info-item" onclick="window.location.href='mailto:info@asgeicsindia.com'" style="cursor: pointer;">
                                 <i class="fas fa-envelope"></i>
                                 <h3>Email</h3>
-                                <p>info@asgeics.com</p>
+                                <p>info@asgeicsindia.com</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section class="map" id="map">
+            <!--<section class="map" id="map">
                 <div id="map-container" style="width: 100%; height: 400px;"></div>
-            </section>
+            </section> -->
         `;
 
         // Initialize contact form
@@ -81,17 +84,40 @@ export default class Contact extends BaseComponent {
 
     async handleSubmit(e) {
         e.preventDefault();
-        const formData = new FormData(e.target);
-        const data = Object.fromEntries(formData.entries());
+        const form = e.target;
+        const submitButton = form.querySelector('button[type="submit"]');
+        const originalText = submitButton.textContent;
+
+        // Show loading state
+        submitButton.textContent = 'Sending...';
+        submitButton.disabled = true;
 
         try {
-            // Here you would typically send the data to your server
-            console.log('Form submitted:', data);
-            alert('Thank you for your message. We will get back to you soon!');
-            e.target.reset();
+            // Prepare the template parameters
+            const templateParams = {
+                from_name: form.querySelector('#name').value,
+                from_email: form.querySelector('#email').value,
+                subject: form.querySelector('#subject').value,
+                message: form.querySelector('#message').value
+            };
+
+            // Send the email
+            const response = await emailjs.send(
+                'service_5xj558c',
+                'template_qdejlkk',
+                templateParams
+            );
+
+            console.log('SUCCESS!', response.status, response.text);
+            alert('Message sent successfully!');
+            form.reset();
         } catch (error) {
-            console.error('Error submitting form:', error);
-            alert('There was an error sending your message. Please try again later.');
+            console.error('FAILED...', error);
+            alert('Failed to send message. Please try again.');
+        } finally {
+            // Reset button state
+            submitButton.textContent = originalText;
+            submitButton.disabled = false;
         }
     }
 

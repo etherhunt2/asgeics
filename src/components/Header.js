@@ -18,18 +18,18 @@ export default class Header {
                 <nav class="header__nav">
                     <a href="./" class="header__nav-link">Home</a>
                     <div class="header__nav-item gradient">
-                        <a href="#services" class="header__nav-link header__services-toggle">Services</a>
+                        <a href="#" class="header__nav-link header__services-toggle">Services</a>
                         <div class="header__submenu">
-                            <a href="#commercial" class="header__submenu-link">Commercial Engineering</a>
+                            <a href="/commercial-engineering" class="header__submenu-link">Commercial Engineering</a>
                             <a href="/electrical-engineering" class="header__submenu-link">Electrical Engineering</a>
-                            <a href="#structural" class="header__submenu-link">Structural Engineering</a>
-                            <a href="#design" class="header__submenu-link">Design Services</a>
+                            <a href="/structural-engineering" class="header__submenu-link">Structural Engineering</a>
+                            <a href="/design-service" class="header__submenu-link">Design Services</a>
                         </div>
                     </div>
                     <a href="./about" class="header__nav-link">About</a>
                     <a href="./contact" class="header__nav-link">Contact</a>
                     <button class="header__nav-button">
-                        <a href="mailto:info@asgeics.com" class="header__nav-link">Email Us</a>
+                        <a href="mailto:info@asgeicsindia.com" class="header__nav-link">Email Us</a>
                     </button>
                 </nav>
 

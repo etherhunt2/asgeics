@@ -1,0 +1,46 @@
+/* CTA Section */
+.cta {
+  /* background: linear-gradient(135deg, #2c3e50, #3498db); */
+  background: url("/images/3d-rendering-house-model.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0;
+  color: #f7efefd5;
+  text-align: center;
+}
+
+.cta__container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.cta p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  backdrop-filter: blur(10px);
+}
+
+.cta__button {
+  display: inline-block;
+  padding: 15px 40px;
+  background-color: #ffffff;
+  color: #2c3e50;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cta__button:hover {
+  background-color: #f8f9fa;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

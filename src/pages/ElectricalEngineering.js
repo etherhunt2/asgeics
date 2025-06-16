@@ -1,5 +1,5 @@
 import BaseComponent from '../components/BaseComponent.js';
-import Whatsapp from '../components/Whatsapp.js';
+import '../styles/components/ee.css';
 
 export default class ElectricalEngineering extends BaseComponent {
     constructor() {
@@ -63,15 +63,15 @@ export default class ElectricalEngineering extends BaseComponent {
                 </div>
             </section>
 
-            <section class="ee-cta">
-                <div class="ee-cta__container">
+            <section class="cta">
+                <div class="cta__container">
                     <h2>Ready to Get Started?</h2>
                     <p>Let our expert team handle your electrical engineering review needs</p>
-                    <a href="/contact" class="ee-cta__button">Contact Us Today</a>
+                    <a href="/contact" class="cta__button">Contact Us Today</a>
                 </div>
             </section>
             <div class="whatsapp-container">
-                <a href="https://wa.me/919826000000" class="whatsapp-button">
+                <a href="https://wa.link/6caatk" class="whatsapp-button">
                     <img src="./icons/whatsapp.png" alt="WhatsApp" class="whatsapp-icon">
                     <span class="whatsapp-text">Chat on WhatsApp</span>
                 </a>

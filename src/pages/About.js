@@ -20,7 +20,7 @@ export default class About extends BaseComponent {
                     <div class="about-description__item image1">
                         <div class="about-description__content">
                             <h2>Our Vision</h2>
-                            <p>At ASGEICS INDIA, we envision a future where engineering excellence meets sustainable innovation. Our commitment to quality and precision has made us a trusted name in the industry for over two decades. We believe in creating solutions that not only meet today's challenges but are also prepared for tomorrow's demands.</p>
+                            <p>ASGEICS INDIA, we envision a future where engineering excellence meets sustainable innovation. Our commitment to quality and precision has made us a trusted name in the industry for over two decades. We believe in creating solutions that not only meet today's challenges but are also prepared for tomorrow's demands.</p>
                         </div>
                     </div>
 
@@ -69,19 +69,6 @@ export default class About extends BaseComponent {
                             </div>-->
                         </div>
 
-                        <div class="team__member">
-                            <div class="team__member-image">
-                                <img src="https://randomuser.me/api/portraits/women/39.jpg" alt="Jane Smith">
-                            </div>
-                            <h3 class="team__member-name">Jane Smith</h3>
-                            <p class="team__member-position">Technical Director</p>
-                            <div class="team__member-social">
-                                <a href="#" class="social-link"><img src="/icons/linkedin.png" style="width: 30px; height: 30px;" /></a>
-                                <a href="#" class="social-link"><img src="/icons/instagram.png" style="width: 30px; height: 30px;" /></a>
-                                <a href="#" class="social-link"><img src="/icons/facebook.png" style="width: 30px; height: 30px;" /></a>
-                            </div>
-                        </div>
-
                         <!--<div class="team__member">
                             <div class="team__member-image">
                                 <img src="https://randomuser.me/api/portraits/men/29.jpg" alt="Mike Johnson">
@@ -97,17 +84,13 @@ export default class About extends BaseComponent {
                     </div>
                 </div>
                 <div class="whatsapp-container">
-                    <a href="https://wa.me/919826000000" class="whatsapp-button">
+                    <a href="https://wa.link/6caatk" class="whatsapp-button">
                         <img src="./icons/whatsapp.png" alt="WhatsApp" class="whatsapp-icon">
                         <span class="whatsapp-text">Chat on WhatsApp</span>
                     </a>
                 </div>
             </section>
         `;
-
-        // Add WhatsApp component
-        // const whatsapp = new Whatsapp();
-        // this.element.appendChild(await whatsapp.render());
 
         return this.element;
     }

@@ -10,7 +10,7 @@ import './styles/components/contact.css';
 import './styles/components/footer.css';
 import './styles/components/about.css';
 import './styles/components/whatsapp.css';
-import './styles/components/ee.css';
+import './styles/components/cta.css';
 
 import { initializeMobileMenu, initializeHeaderScroll } from './js/shared.js';
 import Header from './components/Header.js';
@@ -19,13 +19,19 @@ import Home from './pages/Home.js';
 import About from './pages/About.js';
 import ElectricalEngineering from './pages/ElectricalEngineering.js';
 import Contact from './pages/Contact.js';
+import CommercialEngineering from './pages/CommercialEngineering.js';
+import DesignService from './pages/DesignService.js';
+import StructuralEngineering from './pages/StructuralEngineering.js';
 
 // Router configuration
 const routes = {
     '/': Home,
     '/about': About,
     '/contact': Contact,
-    '/electrical-engineering': ElectricalEngineering
+    '/electrical-engineering': ElectricalEngineering,
+    '/commercial-engineering': CommercialEngineering,
+    '/design-service': DesignService,
+    '/structural-engineering': StructuralEngineering
 };
 
 // App container

@@ -39,7 +39,7 @@
 @media (max-width: 768px) {
   .whatsapp-container {
     bottom: 16px;
-    left: 16px;
+    right: 16px;
   }
 
   .whatsapp-button {

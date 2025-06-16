@@ -118,7 +118,7 @@ export function initializeContact(containerId = 'contact-placeholder') {
                             </div>
                             <div class="contact-info__content">
                                 <h3>Email Address</h3>
-                                <p>info@asgeics.com</p>
+                                <p>info@asgeicsindia.com</p>
                             </div>
                         </div>
 

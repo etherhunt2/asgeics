@@ -9,7 +9,7 @@ export default class Whatsapp extends BaseComponent {
     async render() {
         this.element.innerHTML = `
             <div class="whatsapp-container">
-                <a href="https://wa.me/919826000000" class="whatsapp-button">
+                <a href="https://wa.link/6caatk" class="whatsapp-button">
                     <img src="./icons/whatsapp.png" alt="WhatsApp" class="whatsapp-icon">
                     <span class="whatsapp-text">Chat on WhatsApp</span>
                 </a>

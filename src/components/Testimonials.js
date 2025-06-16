@@ -20,7 +20,7 @@ export default class Testimonials extends BaseComponent {
                         <div class="testimonial-card__author">
                             <!-- <img class="testimonial-card__avatar" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Dalton Garris"> -->
                             <div class="testimonial-card__info">
-                                <h4 class="testimonial-card__name">Dalton Garris</h4>
+                                <h4 class="testimonial-card__name">Richard Morison</h4>
                                 <!-- <p class="testimonial-card__position">Titan Solar Power</p> -->
                             </div>
                         </div>
@@ -31,7 +31,7 @@ export default class Testimonials extends BaseComponent {
                         <div class="testimonial-card__author">
                             <!-- <img class="testimonial-card__avatar" src="https://randomuser.me/api/portraits/women/32.jpg" alt="Ben Ogden"> -->
                             <div class="testimonial-card__info">
-                                <h4 class="testimonial-card__name">Ben Ogden</h4>
+                                <h4 class="testimonial-card__name">Stephanie Graham</h4>
                                 <!-- <p class="testimonial-card__position">LGCY Power</p> -->
                             </div>
                         </div>
@@ -42,7 +42,7 @@ export default class Testimonials extends BaseComponent {
                         <div class="testimonial-card__author">
                             <!-- <img class="testimonial-card__avatar" src="https://randomuser.me/api/portraits/men/39.jpg" alt="Tanner Smith"> -->
                             <div class="testimonial-card__info">
-                                <h4 class="testimonial-card__name">Tanner Smith</h4>
+                                <h4 class="testimonial-card__name">Robert Johnson</h4>
                                 <!-- <p class="testimonial-card__position">ADT Solar</p> -->
                             </div>
                         </div>

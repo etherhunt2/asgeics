@@ -25,7 +25,7 @@ export default class Services extends BaseComponent {
 
                     <div class="service-card">
                         <div class="service-card__icon">
-                            <img src="./icons/file-sign.png" alt="PE Stamping" style="width: 40%;">
+                            <img src="./icons/stamp.png" alt="PE Stamping" style="width: 40%;">
                         </div>
                         <h3 class="service-card__title">PE Stamping</h3>
                         <p class="service-card__description">Professional engineering stamps and certifications for your projects</p>
@@ -33,7 +33,7 @@ export default class Services extends BaseComponent {
 
                     <div class="service-card">
                         <div class="service-card__icon">
-                            <img src="./icons/clipboard.png" alt="Permit Processing" style="width: 40%;">
+                            <img src="./icons/approved.png" alt="Permit Processing" style="width: 40%;">
                         </div>
                         <h3 class="service-card__title">Permit Processing</h3>
                         <p class="service-card__description">Streamlined permit application and processing services</p>
