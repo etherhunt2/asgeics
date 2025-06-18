@@ -5,7 +5,7 @@ export default class Contact extends BaseComponent {
     constructor() {
         super('main', 'contact-page');
         // Initialize EmailJS
-        emailjs.init("dMJqXZw1Gqshg36Up");
+        emailjs.init("vVCuiYIuxlEiDsKIk");
     }
 
     async render() {
@@ -66,18 +66,11 @@ export default class Contact extends BaseComponent {
                     </div>
                 </div>
             </section>
-
-            <!--<section class="map" id="map">
-                <div id="map-container" style="width: 100%; height: 400px;"></div>
-            </section> -->
         `;
 
         // Initialize contact form
         const form = this.element.querySelector('#contact-form');
         form.addEventListener('submit', this.handleSubmit.bind(this));
-
-        // Initialize map after a short delay to ensure the container is ready
-        setTimeout(() => this.initMap(), 100);
 
         return this.element;
     }
@@ -103,8 +96,8 @@ export default class Contact extends BaseComponent {
 
             // Send the email
             const response = await emailjs.send(
-                'service_5xj558c',
-                'template_qdejlkk',
+                'service_uuc5hrx',
+                'template_pwiajia',
                 templateParams
             );
 
@@ -118,56 +111,6 @@ export default class Contact extends BaseComponent {
             // Reset button state
             submitButton.textContent = originalText;
             submitButton.disabled = false;
-        }
-    }
-
-    async initMap() {
-        try {
-            // Create the script tag
-            const script = document.createElement('script');
-            const apiKey = 'YOUR_API_KEY'; // Replace with your actual Google Maps API key
-            script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}`;
-            script.async = true;
-            script.defer = true;
-
-            // Create a promise to wait for script to load
-            const loadPromise = new Promise((resolve, reject) => {
-                script.onload = resolve;
-                script.onerror = reject;
-            });
-
-            // Add script to document
-            document.head.appendChild(script);
-
-            // Wait for script to load
-            await loadPromise;
-
-            // Initialize the map
-            const location = { lat: 25.595203, lng: 85.096329 };
-            const mapContainer = document.getElementById('map-container');
-
-            if (mapContainer && window.google) {
-                const map = new google.maps.Map(mapContainer, {
-                    zoom: 15,
-                    center: location,
-                    mapTypeControl: true,
-                    streetViewControl: true,
-                    fullscreenControl: true,
-                });
-
-                new google.maps.Marker({
-                    position: location,
-                    map: map,
-                    animation: google.maps.Animation.DROP,
-                    title: 'ASGEICS INDIA'
-                });
-            }
-        } catch (error) {
-            console.error('Error loading map:', error);
-            const mapContainer = document.getElementById('map-container');
-            if (mapContainer) {
-                mapContainer.innerHTML = '<p class="map-error">Error loading map. Please try again later.</p>';
-            }
         }
     }
 } 

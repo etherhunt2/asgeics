@@ -52,9 +52,6 @@ export default class About extends BaseComponent {
                     <h2 class="team__title">Our Leadership</h2>
                     <div class="team__members">
                         <div class="team__member">
-                            <!--<div class="team__member-image">
-                                <img src="https://randomuser.me/api/portraits/men/39.jpg" alt="Abishek Anand">
-                            </div>-->
                             <h3 class="team__member-name">Abishek Anand</h3>
                             <p class="team__member-position">Abishek Anand, founder and President of Asgeics India, with over 15 years 
                             of experience in the Engineering field. He has specialized in the area of Civil Engineering in site planning and 
@@ -62,11 +59,18 @@ export default class About extends BaseComponent {
                             Civil/Structural Engineering. He started his own business in 2016 and has been providing engineering services 
                             exclusively for the solar industry since 2016. As part of his experience, Mr. Anand has developed and built an in-house engineering 
                             department from 2 employees to 10 employees to provide structural, Electrical reviews with design consulation.</p>
-                            <!--<div class="team__member-social">
-                                <a href="#" class="social-link"><img src="/icons/linkedin.png" style="width: 30px; height: 30px;" /></a>
-                                <a href="#" class="social-link"><img src="/icons/instagram.png" style="width: 30px; height: 30px;" /></a>
-                                <a href="#" class="social-link"><img src="/icons/facebook.png" style="width: 30px; height: 30px;" /></a>
-                            </div>-->
+                            
+                        </div>
+                        <div class="team__member">
+                            <h3 class="team__member-name">Avinash Anand</h3>
+                            <p class="team__member-position">Avinash Anand, Co-founder and Chief Technology Officer of Asgeics India, brings over 12 years 
+                            of expertise in Electrical Engineering and renewable energy systems. He has specialized in power systems design, 
+                            electrical infrastructure planning, and advanced solar PV system integration. Mr. Anand holds a Master's degree in 
+                            Electrical Engineering and has been instrumental in developing innovative electrical design solutions for complex solar 
+                            installations. Since co-founding the company in 2016, he has led the technical division and expanded the electrical 
+                            engineering team from 3 to 15 professionals. His expertise in electrical code compliance, utility interconnection 
+                            requirements, and energy storage systems has been crucial in establishing Asgeics India as a leader in comprehensive 
+                            solar engineering services.</p>
                         </div>
 
                         <!--<div class="team__member">
