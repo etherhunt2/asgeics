@@ -1,0 +1,119 @@
+/* CTA Section */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+.cta {
+  /* background: linear-gradient(135deg, #2c3e50, #3498db); */
+  background: url("/images/servicesCTA.webp");
+  background-size: cover;
+  background-color: black;
+  background-position: center;
+  /* padding: 80px 0; */
+  color: #f7efefd5;
+  text-align: center;
+  position: relative;
+
+  /* Card Shape & Margins */
+  margin: 40px 20px;
+  min-height: 60vh;
+  /* 40px top/bottom, 20px left/right */
+  border-radius: 0 40px 0 40px;
+
+  /* Base 3D Depth */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.cta::before,
+.cta::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+  border: 6px solid #FFD700;
+  /* Yellow color */
+  pointer-events: none;
+}
+
+/* Top left corner - inverted L */
+.cta::before {
+  top: 20px;
+  left: 20px;
+  border-right: none;
+  border-bottom: none;
+}
+
+/* Bottom right corner - L shape */
+.cta::after {
+  bottom: 20px;
+  right: 20px;
+  border-top: none;
+  border-left: none;
+}
+
+.cta__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.cta h2 {
+  font-size: 4.5rem;
+  margin-bottom: 20px;
+  backdrop-filter: blur(50px);
+  margin-top: 50px;
+  display: inline-block;
+  padding: 0.25em 0.25em;
+  background-color: rgba(255, 255, 255, 0.2);
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+.cta p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  backdrop-filter: blur(50px);
+  background-color: rgba(255, 255, 255, 0.5);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: #1c1919;
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+  border-radius: 15px 15px 0px 0px;
+  display: inline-block;
+  padding: 0rem 1.5rem 0 1.5rem;
+}
+
+.cta__button {
+  display: inline-block;
+  padding: 15px 40px;
+  background-color: #ffffff;
+  color: #2c3e50;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cta__button:hover {
+  background-color: #f8f9fa;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 768px) {
+  .cta h2 {
+    font-size: 2.7rem;
+    margin-top: 10vh;
+  }
+
+  .cta p {
+    font-size: 1.2rem;
+  }
+}

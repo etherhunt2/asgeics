@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&family=Space+Grotesk:wght@500;700&display=swap');
+
+.contact {
+  padding: 6rem 0;
+  background-color: #f8f9fa;
+}
+
+.contact__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.contact__header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.contact__title {
+  font-size: 2.5rem;
+  color: #116dff;
+  margin-bottom: 1rem;
+}
+
+.contact__subtitle {
+  font-size: 1.2rem;
+  color: #333333;
+  opacity: 0.8;
+}
+
+.contact__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.contact__form {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333333;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #116dff;
+}
+
+.contact__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Email Banner */
+.contact__email-banner {
+  background-color: #0d3b66;
+  border: 4px solid #f4a261;
+  border-radius: 8px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.email-banner__icon i {
+  font-size: 4rem;
+  color: #a8dadc;
+}
+
+.email-banner__content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.email-banner__content p {
+  color: #f4a261;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.btn-email-us {
+  background-color: #f4a261;
+  color: #000;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-email-us:hover {
+  background-color: #e76f51;
+  color: #fff;
+}
+
+/* Global Offices Section */
+.offices-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #116dff, #f4a261);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.office-card--merged {
+  width: 100%;
+}
+
+.office-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.office-section__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 4rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.office-section__action {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-divider {
+  width: 100%;
+  height: 2px;
+  margin: 3.5rem 0;
+  background: linear-gradient(90deg, transparent, #116dff, #f4a261, transparent);
+  position: relative;
+  border-radius: 2px;
+  box-shadow: 0 0 15px rgba(17, 109, 255, 0.4), 0 0 15px rgba(244, 162, 97, 0.4);
+}
+
+.contact-divider::before {
+  content: '❖';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.8rem;
+  color: #f4a261;
+  background: #ffffff;
+  padding: 0 1rem;
+  text-shadow: 0 0 10px rgba(244, 162, 97, 0.5);
+}
+
+.office-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.office-card__title {
+  font-family: 'Space Grotesk', sans-serif;
+  color: #0d3b66;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.office-card__detail {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+}
+
+.office-card__detail i {
+  font-size: 1.5rem;
+  margin-top: 0.2rem;
+}
+
+/* India card icons */
+.office-section:first-child .office-card__detail i {
+  color: #c78b5e;
+}
+
+.office-section:last-child .office-card__detail i {
+  color: #116dff;
+}
+
+.office-card__detail p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.4;
+  margin: 0;
+}
+
+
+
+.btn-locate-map {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #f4a261;
+  color: #000;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+  width: 100%;
+}
+
+.btn-locate-map i {
+  font-size: 1.2rem;
+}
+
+.btn-locate-map:hover {
+  background-color: #e76f51;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(231, 111, 81, 0.4);
+}
+
+.map {
+  margin-top: 4rem;
+  height: 400px;
+  width: 100%;
+}
+
+#map-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.map-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: #f8f9fa;
+  color: #333333;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact__content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact__form {
+    order: 2;
+  }
+
+  .contact__info {
+    order: 1;
+  }
+
+
+
+  .office-section__content {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .office-card__detail {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .btn-locate-map {
+    width: 100%;
+  }
+}
