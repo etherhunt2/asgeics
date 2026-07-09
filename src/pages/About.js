@@ -19,22 +19,32 @@ export default class About extends BaseComponent {
                 <div class="about-description__container">
                     <div class="about-description__item image1">
                         <div class="about-description__content">
-                            <h2>Our Vision</h2>
-                            <p>ASGEICS INDIA, we envision a future where engineering excellence meets sustainable innovation. Our commitment to quality and precision has made us a trusted name in the industry for over two decades. We believe in creating solutions that not only meet today's challenges but are also prepared for tomorrow's demands.</p>
-                        </div>
-                    </div>
-
-                    <div class="about-description__item reverse image2">
-                        <div class="about-description__content reverse">
-                            <h2>Our Mission</h2>
-                            <p>Our mission is to deliver exceptional engineering solutions that transform ideas into reality. We combine technical expertise with innovative thinking to create sustainable, efficient, and cost-effective solutions for our clients. Through continuous learning and adaptation, we stay at the forefront of engineering advancement.</p>
-                        </div>
-                    </div>
-
-                    <div class="about-description__item image3">
-                        <div class="about-description__content">
-                            <h2>Our Values</h2>
-                            <p>Integrity, innovation, and excellence form the cornerstone of our operations. We believe in fostering long-term relationships with our clients through transparent communication and reliable service delivery. Our team's dedication to these values ensures that every project we undertake meets the highest standards of quality and professionalism.</p>
+                            <h2>Welcome to <strong>ASGEICS INDIA</strong></h2>
+                            <p>
+                                At ASGEICS INDIA, we are committed to building a cleaner, smarter, and more sustainable future through 
+                                innovative solar energy solutions. Our company was founded with a vision to provide complete solar 
+                                engineering and installation services under one roof — including solar design, structural engineering 
+                                Design, electrical planning, PE Stamping, permit assistance and professional installation for  Residential /Commercial Projects.
+                            </p></br>
+                            <p>
+                                We understand that every solar project is more than just an energy system; it is an investment in 
+                                reliability, efficiency, and sustainability. That is why we focus on delivering high-quality solutions 
+                                that combine technical expertise, safety, and long-term performance.
+                            </p></br>
+                            <p>
+                                Our mission is to simplify the transition to renewable energy by offering end-to-end services with 
+                                transparency, precision, and customer satisfaction at the core of everything we do. From concept and 
+                                design to approvals and final installation, our dedicated team ensures that every project is executed 
+                                with excellence.
+                            </p></br>
+                            <p>
+                                At ASGEICS INDIA, we believe solar energy is not only the future — it is the responsibility of the 
+                                present. We are proud to contribute  clean energy growth and support businesses  communities in adopting 
+                                sustainable power solutions.
+                            </p></br>
+                            <p>
+                                Thank you for trusting ASGEICS INDIA as your solar engineering and installation partner. We look forward to powering a brighter tomorrow together.
+                            </p>
                         </div>
                     </div>
 

@@ -1,6 +1,4 @@
 /* CTA Section */
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-
 .cta {
   /* background: linear-gradient(135deg, #2c3e50, #3498db); */
   background: url("/images/servicesCTA.webp");
@@ -59,18 +57,19 @@
 }
 
 .cta h2 {
-  font-size: 4.5rem;
-  margin-bottom: 20px;
-  backdrop-filter: blur(50px);
-  margin-top: 50px;
-  display: inline-block;
-  padding: 0.25em 0.25em;
-  background-color: rgba(255, 255, 255, 0.2);
-  font-family: "Roboto Mono", monospace;
-  font-optical-sizing: auto;
+  font-size: 3.5rem;
   font-weight: 700;
+  font-family: "Rockwell", serif;
   font-style: normal;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  font-optical-sizing: auto;
+  margin-bottom: 20px;
+  margin-top: 50px;
+  line-height: 1.2;
+  text-shadow: 12px 12px 14px rgba(0, 0, 0, 0.9);
+  display: inline-block;
+  backdrop-filter: blur(50px);
+  padding: 0.25em 0.25em;
+  background-color: rgba(98, 95, 95, 0.4);
 }
 
 .cta p {

@@ -64,7 +64,7 @@
 }
 
 .about-description__item.image1 {
-  background: url("/images/aerial-shot-industrial-buildings-bristol-england.jpg");
+  background: url("/images/about/about-intro.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -73,22 +73,6 @@
   width: 100%;
   height: 100%;
   bottom: 0;
-}
-
-.about-description__item.image2 {
-  background: url("/images/solar-power-plant-field-aerial-view-solar-panels.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin: 0;
-}
-
-.about-description__item.image3 {
-  background: url("/images/3d-house-with-solar-pannels.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin: 0;
 }
 
 .about-description__item.image4 {

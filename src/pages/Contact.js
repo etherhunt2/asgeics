@@ -95,7 +95,8 @@ export default class Contact extends BaseComponent {
                                             </div>
                                         </div>
                                         <div class="office-section__action">
-                                            <a href="https://maps.google.com/?q=Plot+231,+Sahu+Tola,+Marar,+Ramgarh+Jharkhand+829122" target="_blank" rel="noopener noreferrer" class="btn-locate-map">
+                                            <a href="https://www.google.com/maps/place/Marar,+Jharkhand+829117,+India/@23.6738479,85.5096519,3a,75y,337.07h,90.47t/data=!3m7!1e1!3m5!1skiagYxCrW9-ky4Qf-4lY6g!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-0.47226213980252396%26panoid%3DkiagYxCrW9-ky4Qf-4lY6g%26yaw%3D337.0729424445742!7i13312!8i6656!4m7!3m6!1s0x39f4f3427617bdc5:0x149db90692dc9705!8m2!3d23.6715992!4d85.5071469!15sCi5QbG90IG5vIDIzMSwgU2FodSBUb2xhIE1hcmFyIHJhbWdhcmggamhhcmtoYW5kkgEIbG9jYWxpdHngAQA!16s%2Fg%2F12hr00d0c?entry=tts&g_ep=EgoyMDI2MDUxMC4wIPu8ASoASAFQAw%3D%3D&skid=3941a888-c3af-4419-9573-d09a1d4673f4"
+                                                target="_blank" rel="noopener noreferrer" class="btn-locate-map">
                                                 <i class="fas fa-map-marker-alt"></i> Locate India Office
                                             </a>
                                         </div>
