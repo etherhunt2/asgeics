@@ -52,7 +52,7 @@ export default class InterConnectionPermitting extends BaseComponent {
                     </div>
                     <div class="ic-details__grid">
                         <div class="ic-details__image-wrap">
-                            <img src="https://radiantengineer.com/wp-content/uploads/2026/02/pexels-gustavo-fring-4254157-scaled.jpg" alt="Solar Permitting Support" class="ic-details__image" />
+                            <img src="/images/solar-permitting.webp" alt="Solar Permitting Support" class="ic-details__image" />
                         </div>
                         <div class="ic-details__content">
                             <p>From initial submission to final approval, our team manages the entire AHJ permit application process. We ensure all documentation strictly aligns with local building codes, oversee plan reviews, and rapidly address agency feedback to keep your project compliant and on track.</p>

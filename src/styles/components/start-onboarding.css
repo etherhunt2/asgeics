@@ -21,10 +21,10 @@
   background:
     linear-gradient(
       135deg,
-      rgba(82, 114, 126, 0.85) 0%,
-      rgba(35, 75, 88, 0.92) 100%
+      rgba(82, 114, 126, 0.45) 0%,
+      rgba(35, 75, 88, 0.62) 100%
     ),
-    url("https://ensiteservices.com/wp-content/uploads/2025/10/Untitled-design-2025-10-13T120848.461-1-1-1-900x1024.png");
+    url("/images/onboarding.webp");
   background-size: cover;
   background-position: center center;
   display: flex;
