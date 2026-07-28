@@ -1,15 +1,15 @@
-import BaseComponent from '../components/BaseComponent.js';
-import emailjs from '@emailjs/browser';
+import BaseComponent from "../components/BaseComponent.js";
+import emailjs from "@emailjs/browser";
 
 export default class Contact extends BaseComponent {
-    constructor() {
-        super('main', 'contact-page');
-        // Initialize EmailJS
-        emailjs.init("vVCuiYIuxlEiDsKIk");
-    }
+  constructor() {
+    super("main", "contact-page");
+    // Initialize EmailJS
+    emailjs.init("S9VAbYSq17CKAkjUz");
+  }
 
-    async render() {
-        this.element.innerHTML = `
+  async render() {
+    this.element.innerHTML = `
             <section class="contact" id="contact">
                 <div class="contact__container">
                     <header class="contact__header">
@@ -109,49 +109,73 @@ export default class Contact extends BaseComponent {
             </section>
         `;
 
-        // Initialize contact form
-        const form = this.element.querySelector('#contact-form');
-        form.addEventListener('submit', this.handleSubmit.bind(this));
+    // Initialize contact form
+    const form = this.element.querySelector("#contact-form");
+    form.addEventListener("submit", this.handleSubmit.bind(this));
 
-        return this.element;
+    return this.element;
+  }
+
+  async handleSubmit(e) {
+    e.preventDefault();
+    const form = e.target;
+    const submitButton = form.querySelector('button[type="submit"]');
+    const originalText = submitButton.textContent;
+
+    // Show loading state
+    submitButton.textContent = "Sending...";
+    submitButton.disabled = true;
+
+    try {
+      const messageTable = `
+<table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 550px; font-family: Arial, sans-serif; font-size: 14px;">
+  <thead>
+    <tr style="background-color: #0f4c5c; color: #ffffff;">
+      <th colspan="2" style="text-align: left; padding: 10px; font-size: 16px;">New Contact Request from ASGEICS India Website</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="font-weight: bold; width: 35%; background-color: #f4f6f8;">Full Name</td>
+      <td>${form.querySelector("#name").value}</td>
+    </tr>
+    <tr>
+      <td style="font-weight: bold; background-color: #f4f6f8;">Work Email</td>
+      <td><a href="mailto:${form.querySelector("#email").value}">${form.querySelector("#email").value}</a></td>
+    </tr>
+    <tr>
+      <td style="font-weight: bold; background-color: #f4f6f8;">Message</td>
+      <td>${form.querySelector("#message").value}</td>
+    </tr>
+  </tbody>
+</table>`.trim();
+      // Prepare the template parameters
+      const templateParams = {
+        name: form.querySelector("#name").value,
+        from_name: form.querySelector("#name").value,
+        from_email: form.querySelector("#email").value,
+        subject: form.querySelector("#subject").value,
+        message: messageTable,
+      };
+
+      // Send the email
+      await emailjs.send(
+        "service_uuc5hrx",
+        "template_pwiajia",
+        templateParams,
+        "S9VAbYSq17CKAkjUz",
+      );
+
+      // console.log('SUCCESS!', response.status, response.text);
+      alert("Message sent successfully!");
+      form.reset();
+    } catch (error) {
+      console.error("FAILED...", error);
+      alert("Failed to send message. Please try again.");
+    } finally {
+      // Reset button state
+      submitButton.textContent = originalText;
+      submitButton.disabled = false;
     }
-
-    async handleSubmit(e) {
-        e.preventDefault();
-        const form = e.target;
-        const submitButton = form.querySelector('button[type="submit"]');
-        const originalText = submitButton.textContent;
-
-        // Show loading state
-        submitButton.textContent = 'Sending...';
-        submitButton.disabled = true;
-
-        try {
-            // Prepare the template parameters
-            const templateParams = {
-                from_name: form.querySelector('#name').value,
-                from_email: form.querySelector('#email').value,
-                subject: form.querySelector('#subject').value,
-                message: form.querySelector('#message').value
-            };
-
-            // Send the email
-            const response = await emailjs.send(
-                'service_uuc5hrx',
-                'template_pwiajia',
-                templateParams
-            );
-
-            console.log('SUCCESS!', response.status, response.text);
-            alert('Message sent successfully!');
-            form.reset();
-        } catch (error) {
-            console.error('FAILED...', error);
-            alert('Failed to send message. Please try again.');
-        } finally {
-            // Reset button state
-            submitButton.textContent = originalText;
-            submitButton.disabled = false;
-        }
-    }
-} 
+  }
+}

@@ -1,11 +1,11 @@
 export default class Header {
-    constructor() {
-        this.element = document.createElement('header');
-        this.element.className = 'header';
-    }
+  constructor() {
+    this.element = document.createElement("header");
+    this.element.className = "header";
+  }
 
-    async render() {
-        this.element.innerHTML = `
+  async render() {
+    this.element.innerHTML = `
             <div class="header__container">
                 <a href="./" class="header__logo">
                     <img src="/logo.svg" alt="ASGEICS Logo" />
@@ -20,10 +20,12 @@ export default class Header {
                     <div class="header__nav-item gradient">
                         <a href="#" class="header__nav-link header__services-toggle">Services</a>
                         <div class="header__submenu">
-                            <a href="/commercial-engineering" class="header__submenu-link">Commercial Engineering</a>
-                            <a href="/electrical-engineering" class="header__submenu-link">Electrical Engineering</a>
-                            <a href="/structural-engineering" class="header__submenu-link">Structural Engineering</a>
+                            <a href="/site-survey" class="header__submenu-link">Site Survey</a>
                             <a href="/design-service" class="header__submenu-link">Design Services</a>
+                            <a href="/structural-engineering" class="header__submenu-link">Structural Engineering</a>
+                            <a href="/electrical-engineering" class="header__submenu-link">Electrical Engineering</a>
+                            <a href="/commercial-engineering" class="header__submenu-link">Commercial Engineering</a>
+                            <a href="/interconnection-permitting" class="header__submenu-link">AHJ Permitting & Interconnection</a>
                         </div>
                     </div>
                     <a href="./about" class="header__nav-link">About</a>
@@ -39,6 +41,6 @@ export default class Header {
             </div>
         `;
 
-        return this.element;
-    }
-} 
+    return this.element;
+  }
+}

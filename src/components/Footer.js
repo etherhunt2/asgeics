@@ -1,11 +1,11 @@
 export default class Footer {
-    constructor() {
-        this.element = document.createElement('footer');
-        this.element.className = 'footer';
-    }
+  constructor() {
+    this.element = document.createElement("footer");
+    this.element.className = "footer";
+  }
 
-    async render() {
-        this.element.innerHTML = `
+  async render() {
+    this.element.innerHTML = `
             <div class="footer__container">
                 <div class="footer__content">
                     <div class="footer__section">
@@ -22,11 +22,13 @@ export default class Footer {
                     <div class="footer__section">
                         <h3 class="footer__title">Quick Links</h3>
                         <ul class="footer__links">
-                            <li class="footer__link"><a href="/commercial-engineering">Commercial Engineering</a></li>
+                            <li class="footer__link"><a href="/about">About Us</a></li>
+                            <li class="footer__link"><a href="/site-survey">Site Survey</a></li>
+                            <li class="footer__link"><a href="/design-service">Design Services</a></li>
                             <li class="footer__link"><a href="/structural-engineering">Structural Engineering</a></li>
                             <li class="footer__link"><a href="/electrical-engineering">Electrical Engineering</a></li>
-                            <li class="footer__link"><a href="/design-service">Design Services</a></li>
-                            <li class="footer__link"><a href="/about">About Us</a></li>
+                            <li class="footer__link"><a href="/commercial-engineering">Commercial Engineering</a></li>
+                            <li class="footer__link"><a href="/interconnection-permitting">AHJ Permitting & Interconnection</a></li>
                         </ul>
                     </div>
 
@@ -52,6 +54,6 @@ export default class Footer {
             </div>
         `;
 
-        return this.element;
-    }
-} 
+    return this.element;
+  }
+}

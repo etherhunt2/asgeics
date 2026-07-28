@@ -2,8 +2,9 @@
 
 /* Hero Section */
 .ee-hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("https://peganelectric.com/wp-content/uploads/2024/12/Electrician-for-commercial-and-industrial-facilities-Pegan-Electric5.jpg");
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("/images/Electrician-for-commercial-and-industrial-facilities-Pegan-Electric5.jpg");
   background-size: cover;
   background-position: center;
   padding: 120px 0;

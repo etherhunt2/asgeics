@@ -84,12 +84,12 @@
   font-weight: 400;
   font-style: italic;
   border-radius: 15px 15px 0px 0px;
-  display: inline-block;
+  /* display: inline-block; */
   padding: 0rem 1.5rem 0 1.5rem;
 }
 
 .cta__button {
-  display: inline-block;
+  /* display: inline-block; */
   padding: 15px 40px;
   background-color: #ffffff;
   color: #2c3e50;

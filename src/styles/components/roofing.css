@@ -1,0 +1,680 @@
+.roofing-page {
+  font-family: "Inter", sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+}
+
+.roofing-highlight-blue {
+  color: #326d82;
+}
+
+/* Typography */
+.roofing-page h1,
+.roofing-page h2,
+.roofing-page h3 {
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 15px;
+  color: #1a1a1a;
+}
+
+.roofing-page p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Buttons */
+.roofing-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background-color 0.3s,
+    border-color 0.3s,
+    color 0.3s,
+    transform 0.2s;
+  font-size: 14px;
+  text-align: center;
+}
+
+.roofing-btn--primary {
+  background-color: #326d82;
+  color: #ffffff;
+  border: 1px solid #326d82;
+}
+
+.roofing-btn--primary:hover {
+  background-color: #265566;
+  color: #ffffff;
+}
+
+.roofing-btn--outline {
+  background-color: transparent;
+  color: #326d82;
+  border: 1px solid #326d82;
+}
+
+.roofing-btn--outline:hover {
+  background-color: rgba(50, 109, 130, 0.1);
+}
+
+.roofing-btn--outline-light {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.roofing-btn--outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Hero Section */
+.roofing-hero {
+  background: linear-gradient(135deg, #e3edf2 0%, #ffffff 100%);
+  padding: 80px 20px 40px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 10vh;
+}
+
+.roofing-hero__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.roofing-hero__content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.roofing-hero__badge {
+  display: inline-block;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 4px 10px;
+  border-radius: 2px;
+  background-color: #326d82;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.roofing-hero__title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+.roofing-hero__description {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.roofing-hero__actions {
+  display: flex;
+  gap: 15px;
+}
+
+.roofing-hero__image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.roofing-hero__image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Bottlenecks Section */
+.roofing-bottlenecks {
+  padding: 80px 20px;
+  background-color: #ffffff;
+}
+
+.roofing-bottlenecks__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.roofing-bottlenecks__header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.roofing-bottlenecks__header h2 {
+  font-size: 2.5rem;
+}
+
+.roofing-bottlenecks__header p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.roofing-bottlenecks__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.roofing-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-top: 4px solid transparent;
+}
+
+.roofing-card--negative {
+  border-top-color: #e74c3c;
+}
+
+.roofing-card--positive {
+  border-top-color: #326d82;
+}
+
+.roofing-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #eaeaea;
+  padding-bottom: 10px;
+}
+
+.roofing-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.roofing-list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+}
+
+.roofing-list li::before {
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.roofing-list--negative li::before {
+  content: "✕";
+  color: #e74c3c;
+}
+
+.roofing-list--positive li::before {
+  content: "✓";
+  color: #326d82;
+}
+
+/* Inside Survey */
+.roofing-inside {
+  padding: 80px 20px;
+  background: #f9f9f9;
+}
+
+.roofing-inside__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.roofing-inside__container h2 {
+  font-size: 2.5rem;
+}
+
+.roofing-inside__subtext {
+  font-size: 1.1rem;
+  margin-bottom: 50px;
+}
+
+/* Hotspot Map */
+.roofing-inside__hotspot-map {
+  position: relative;
+  max-width: 95vw;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: visible;
+  padding: 20px 0;
+}
+
+.roofing-inside__house-img {
+  width: 100%;
+  height: 80vh;
+  display: block;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+/* Hotspot */
+.roofing-hotspot {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  cursor: pointer;
+}
+
+.roofing-hotspot__icon {
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  color: #326d82;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.roofing-hotspot:hover .roofing-hotspot__icon {
+  transform: scale(1.1);
+  background-color: #326d82;
+  color: #ffffff;
+}
+
+.roofing-hotspot__pulse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #ffffff;
+  z-index: 1;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+.roofing-hotspot__card {
+  position: absolute;
+  width: 320px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  z-index: 20;
+  text-align: center;
+}
+
+.roofing-hotspot:hover .roofing-hotspot__card {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.roofing-hotspot__card--right {
+  left: calc(100% + 20px);
+  top: 50%;
+  transform: translateY(-50%) translateX(-10px);
+}
+
+.roofing-hotspot__card--left {
+  right: calc(100% + 20px);
+  top: 50%;
+  transform: translateY(-50%) translateX(10px);
+}
+
+.roofing-hotspot__card--bottom {
+  top: calc(100% + 20px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+}
+
+.roofing-hotspot:hover .roofing-hotspot__card--right,
+.roofing-hotspot:hover .roofing-hotspot__card--left {
+  transform: translateY(-50%) translateX(0);
+}
+
+.roofing-hotspot:hover .roofing-hotspot__card--bottom {
+  transform: translateX(-50%) translateY(0);
+}
+
+.roofing-hotspot__card-image {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+}
+
+.roofing-hotspot__card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.roofing-hotspot__card-content {
+  padding: 25px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.roofing-hotspot__card-content h4 {
+  margin: 0 0 12px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111111;
+  font-family: "Poppins", sans-serif;
+}
+
+.roofing-hotspot__card-content p {
+  font-size: 0.95rem;
+  color: #3b5a6c;
+  margin: 0 0 20px;
+  line-height: 1.6;
+}
+
+.roofing-hotspot__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 8px;
+  justify-content: center;
+}
+
+.roofing-hotspot__tag {
+  background-color: #4e7e92;
+  color: #ffffff;
+  font-size: 0.8rem;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+}
+
+/* Window Section */
+.roofing-window {
+  padding: 80px 20px;
+  background: #ffffff;
+}
+
+.roofing-window__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.roofing-window__image {
+  flex: 1;
+}
+
+.roofing-window__image img {
+  width: 100%;
+  height: auto;
+}
+
+.roofing-window__content {
+  flex: 1;
+}
+
+.roofing-window__content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.roofing-window__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+.roofing-window__list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.roofing-window__list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #326d82;
+  font-weight: bold;
+}
+
+/* Partner Section */
+.roofing-partner {
+  padding: 80px 20px;
+  background: #3786aa;
+  color: #ffffff;
+  text-align: center;
+}
+
+.roofing-partner h2,
+.roofing-partner h3 {
+  color: #ffffff;
+}
+
+.roofing-partner__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.roofing-partner__container h2 {
+  font-size: 52px;
+}
+
+.roofing-partner .roofing-partner__subtext {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-bottom: 50px;
+}
+
+.roofing-partner__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.roofing-partner-card {
+  background: #ffffff;
+  color: #333;
+  padding: 30px 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.roofing-partner-card h3 {
+  color: #333;
+  font-size: 1.1rem;
+  margin: 15px 0 10px;
+}
+
+.roofing-partner-card p {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0;
+}
+
+.roofing-partner-card__icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.roofing-partner-card__icon img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+/* Workflow Section */
+.roofing-workflow {
+  padding: 80px 20px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.roofing-workflow__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.roofing-workflow__container h2 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+.roofing-workflow__subtext {
+  font-size: 1.1rem;
+  margin-bottom: 60px;
+}
+
+.roofing-workflow__steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.roofing-workflow-step {
+  flex: 1;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.roofing-workflow-step__icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #326d82;
+}
+
+.roofing-workflow-step h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.roofing-workflow-step p {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0;
+}
+
+.roofing-workflow-step__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CTA Section */
+.roofing-cta {
+  background-color: #1f4251;
+  padding: 80px 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.roofing-cta__container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.roofing-cta h2 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.roofing-cta p {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  margin-bottom: 30px;
+}
+
+.roofing-cta__actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .roofing-hero__container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .roofing-hero__actions {
+    justify-content: center;
+  }
+
+  .roofing-hero__image {
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .roofing-bottlenecks__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .roofing-window__container {
+    flex-direction: column;
+  }
+
+  .roofing-partner__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .roofing-hero__title {
+    font-size: 2.5rem;
+  }
+
+  .roofing-partner__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .roofing-workflow__steps {
+    flex-direction: column;
+  }
+
+  .workflow-step__arrow {
+    transform: rotate(90deg);
+    margin: 10px 0;
+  }
+
+  .roofing-cta__actions,
+  .roofing-hero__actions {
+    flex-direction: column;
+  }
+}

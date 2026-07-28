@@ -1,0 +1,111 @@
+/* Minimal Under Construction Styles - Static & Responsive */
+
+.under-construction-page {
+  padding: 100px 20px;
+  background-color: #f8fafc;
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', 'Poppins', sans-serif;
+  color: #1e293b;
+}
+
+.under-construction-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.under-construction-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 56px 32px;
+  text-align: center;
+}
+
+.under-construction-icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 88px;
+  height: 88px;
+  background-color: #f0fdf4;
+  color: #326d82;
+  border-radius: 50%;
+  margin-bottom: 24px;
+  border: 1px solid #e2e8f0;
+}
+
+.under-construction-big-icon {
+  width: 44px;
+  height: 44px;
+}
+
+.under-construction-big-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.under-construction-one-liner {
+  font-size: 18px;
+  color: #64748b;
+  margin-bottom: 32px;
+  line-height: 1.5;
+}
+
+.under-construction-home-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #326d82;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.under-construction-home-btn:hover {
+  background-color: #265566;
+}
+
+/* Explicitly disable all animations & transitions */
+.under-construction-page *,
+.under-construction-page *::before,
+.under-construction-page *::after {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 600px) {
+  .under-construction-card {
+    padding: 40px 20px;
+  }
+
+  .under-construction-icon-wrapper {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 20px;
+  }
+
+  .under-construction-big-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .under-construction-big-title {
+    font-size: 30px;
+  }
+
+  .under-construction-one-liner {
+    font-size: 15px;
+    margin-bottom: 24px;
+  }
+}

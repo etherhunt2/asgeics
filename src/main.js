@@ -1,81 +1,102 @@
 // Import styles
-import './styles/main.css';
-import './styles/components/header.css';
-import './styles/components/hero.css';
-import './styles/components/services.css';
-import './styles/components/process.css';
-import './styles/components/benefits.css';
-import './styles/components/testimonials.css';
-import './styles/components/contact.css';
-import './styles/components/footer.css';
-import './styles/components/about.css';
-import './styles/components/whatsapp.css';
-import './styles/components/cta.css';
-
-import { initializeMobileMenu, initializeHeaderScroll } from './js/shared.js';
-import Header from './components/Header.js';
-import Footer from './components/Footer.js';
-import Home from './pages/Home.js';
-import About from './pages/About.js';
-import ElectricalEngineering from './pages/ElectricalEngineering.js';
-import Contact from './pages/Contact.js';
-import CommercialEngineering from './pages/CommercialEngineering.js';
-import DesignService from './pages/DesignService.js';
-import StructuralEngineering from './pages/StructuralEngineering.js';
+import "./styles/main.css";
+import "./styles/components/header.css";
+import "./styles/components/hero.css";
+import "./styles/components/services.css";
+import "./styles/components/process.css";
+import "./styles/components/benefits.css";
+import "./styles/components/testimonials.css";
+import "./styles/components/contact.css";
+import "./styles/components/footer.css";
+import "./styles/components/about.css";
+import "./styles/components/whatsapp.css";
+import "./styles/components/cta.css";
+import "./styles/components/site-survey.css";
+import "./styles/components/interconnection-permitting.css";
+import "./styles/components/solar-solution.css";
+import { initializeMobileMenu, initializeHeaderScroll } from "./js/shared.js";
+import Header from "./components/Header.js";
+import Footer from "./components/Footer.js";
+import Home from "./pages/Home.js";
+import About from "./pages/About.js";
+import ElectricalEngineering from "./pages/ElectricalEngineering.js";
+import Contact from "./pages/Contact.js";
+import CommercialEngineering from "./pages/CommercialEngineering.js";
+import DesignService from "./pages/DesignService.js";
+import StructuralEngineering from "./pages/StructuralEngineering.js";
+import SiteSurvey from "./pages/SiteSurvey.js";
+import InterConnectionPermitting from "./pages/InterConnectionPermitting.js";
+import SolarSolution from "./pages/SolarSolution.js";
+import Roofing from "./pages/Roofing.js";
+import GetStarted from "./pages/GetStarted.js";
+import StartOnboarding from "./pages/StartOnboarding.js";
+import DiscoveryCall from "./pages/DiscoveryCall.js";
+import UndderConstruction from "./pages/UndderConstruction.js";
 
 // Router configuration
 const routes = {
-    '/': Home,
-    '/about': About,
-    '/contact': Contact,
-    '/electrical-engineering': ElectricalEngineering,
-    '/commercial-engineering': CommercialEngineering,
-    '/design-service': DesignService,
-    '/structural-engineering': StructuralEngineering
+  "/": Home,
+  "/about": About,
+  "/contact": Contact,
+  "/electrical-engineering": ElectricalEngineering,
+  "/commercial-engineering": CommercialEngineering,
+  "/design-service": DesignService,
+  "/structural-engineering": StructuralEngineering,
+  "/site-survey": SiteSurvey,
+  "/interconnection-permitting": InterConnectionPermitting,
+  "/solar": SolarSolution,
+  "/roofing": Roofing,
+  "/get-started": GetStarted,
+  "/start-onboarding": StartOnboarding,
+  "/schedule-a-call": DiscoveryCall,
+  "/under-construction": UndderConstruction,
 };
 
 // App container
-const app = document.getElementById('app');
+const app = document.getElementById("app");
 
 // Render function
 async function render() {
-    // Get current route
-    const path = window.location.pathname === '/' ? '/' : window.location.pathname.replace(/\/$/, '');
-    const Page = routes[path] || Home;
+  // Get current route
+  const path =
+    window.location.pathname === "/"
+      ? "/"
+      : window.location.pathname.replace(/\/$/, "");
+  const Page = routes[path] || Home;
 
-    // Clear app container
-    app.innerHTML = '';
+  // Clear app container
+  app.innerHTML = "";
 
-    // Render header
-    const header = new Header();
-    app.appendChild(await header.render());
+  // Render header
+  const header = new Header();
+  app.appendChild(await header.render());
 
-    // Render page content
-    const page = new Page();
-    app.appendChild(await page.render());
+  // Render page content
+  const page = new Page();
+  app.appendChild(await page.render());
 
-    // Render footer
-    const footer = new Footer();
-    app.appendChild(await footer.render());
+  // Render footer
+  const footer = new Footer();
+  app.appendChild(await footer.render());
 
-    // Initialize functionality
-    initializeMobileMenu();
-    initializeHeaderScroll();
+  // Initialize functionality
+  initializeMobileMenu();
+  initializeHeaderScroll();
 }
 
 // Handle navigation
-window.addEventListener('popstate', render);
-document.addEventListener('DOMContentLoaded', () => {
-    // Handle navigation clicks
-    document.addEventListener('click', e => {
-        const { target } = e;
-        if (target.matches('a') && target.href.startsWith(window.location.origin)) {
-            e.preventDefault();
-            window.history.pushState({}, '', target.href);
-            render();
-        }
-    });
+window.addEventListener("popstate", render);
+document.addEventListener("DOMContentLoaded", () => {
+  // Handle navigation clicks
+  document.addEventListener("click", (e) => {
+    const { target } = e;
+    if (target.matches("a") && target.href.startsWith(window.location.origin)) {
+      e.preventDefault();
+      window.history.pushState({}, "", target.href);
+      render();
+    }
+  });
 
-    // Initial render
-    render();
-}); 
+  // Initial render
+  render();
+});
